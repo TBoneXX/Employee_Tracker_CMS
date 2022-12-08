@@ -1,18 +1,18 @@
 const inquirer = require("inquirer");
 const table = require("console.table");
-const connection = require("../db/connection");
+const connection = require("./db/connection");
 const prompt = require("./prompts");
-const { initPrompt } = require("./prompts");
+
 
 
 
 // launch app
-initPrompt();
+firstPrompt();
 
 /* === || INITIAL PROMPT || === */
-function initPrompt() {
+function firstPrompt() {
 	// Main Menu
-	inquirer.prompt(prompt.initPrompt).then(function ({ task }) {
+	inquirer.prompt(prompt.firstPrompt).then(function ({ task }) {
 		switch (task) {
 			case "View All Employees":
 				viewEmployee();

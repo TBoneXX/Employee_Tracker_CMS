@@ -1,5 +1,5 @@
 module.exports = {
-	initPrompt: {
+	firstPrompt: {
 		type: "list",
 		name: "task",
 		message: "Make a selection:",
