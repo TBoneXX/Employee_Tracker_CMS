@@ -20,12 +20,30 @@ connection.connect(function (err) {
     initPrompt();
 })
 
-// Give the user a pleasant welcome message.
-console.table(
-    "\n------------ EMPLOYEE TRACKER ------------\n"
+// Startup Message
+console.log(
+    `
+    ╔═════════════════════════════════════════════════════╗
+    ║                                                     ║
+    ║     _____                 _                         ║
+    ║    | ____|_ __ ___  _ __ | | ___  _   _  ___  ___   ║
+    ║    |  _| | '_ \` _ \\| '_ \\| |/ _ \\| | | |/ _ \\/ _ \\  ║
+    ║    | |___| | | | | | |_) | | (_) | |_| |  __/  __/  ║
+    ║    |_____|_| |_| |_| .__/|_|\\___/ \\__, |\\___|\\___|  ║
+    ║                    |_|            |___/             ║
+    ║                                                     ║
+    ║     __  __                                          ║
+    ║    |  \\/  | __ _ _ __   __ _  __ _  ___ _ __        ║
+    ║    | |\\/| |/ _\` | '_ \\ / _\` |/ _\` |\/ _ \\ '__|       ║
+    ║    | |  | | (_| | | | | (_| | (_| |  __/ |          ║
+    ║    |_|  |_|\\__,_|_| |_|\\__,_|\\__, |\\___|_|          ║
+    ║                              |___/                  ║
+    ║                                                     ║
+    \╚═════════════════════════════════════════════════════╝
+    `
 )
 
-// Ask the user initial action question to figure out what they would like to do.
+// Home Menu - Initial Question Prompt
 const initPrompt = async () => {
     try {
         let answer = await inquirer.prompt({
@@ -169,7 +187,7 @@ const employeeAdd = async () => {
                         value: role.id
                     }
                 }),
-                message: "What is this Employee's role id?"
+                message: "What is this Employee's role?"
             },
             {
                 name: 'employeeManagerId',
@@ -180,7 +198,7 @@ const employeeAdd = async () => {
                         value: manager.id
                     }
                 }),
-                message: "What is this Employee's Manager's Id?"
+                message: "Who is this Employee's Manager?"
             }
         ])
 
