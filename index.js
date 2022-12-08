@@ -1,5 +1,4 @@
 const inquirer = require("inquirer");
-// const connection = require("./db/connection");
 const mysql = require('mysql');
 const consoleTable = require('console.table');
 const util = require('util');
@@ -91,7 +90,7 @@ const initPrompt = async () => {
                 departmentAdd();
                 break
 
-            
+                          
 
             
 
@@ -232,7 +231,7 @@ const departmentAdd = async () => {
         ]);
 
         let result = await connection.query("INSERT INTO department SET ?", {
-            department_name: answer.deptName
+            name: answer.deptName
         });
 
         console.log(`${answer.deptName} added successfully to departments.\n`)
@@ -271,7 +270,7 @@ const roleAdd = async () => {
                         value: departmentId.id
                     }
                 }),
-                message: 'What department ID is this role associated with?',
+                message: 'What department includes this role?',
             }
         ]);
         

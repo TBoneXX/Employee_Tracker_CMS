@@ -2,13 +2,13 @@ USE employee_DB;
 
 /* Seed Departments */
 
-INSERT INTO department (name)
+INSERT INTO department (department_name)
 VALUES ("Sales");
-INSERT INTO department (name)
+INSERT INTO department (department_name)
 VALUES ("Engineering");
-INSERT INTO department (name)
+INSERT INTO department (department_name)
 VALUES ("Finance");
-INSERT INTO department (name)
+INSERT INTO department (department_name)
 VALUES ("Legal");
 
 /* Seed Roles */
