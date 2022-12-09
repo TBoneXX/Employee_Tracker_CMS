@@ -4,6 +4,10 @@
 ## Description
 This command line application uses Inquirer, MySQL, and Console.Table to manage a company's employees, including their departments, managers, titles, and salaries.
 
+
+Link to demonstration: <a href= "https://drive.google.com/file/d/1S1buFQbEnTAlMm3_ERF7SxKkkWy4y_d9/view">Demo</a>
+
+
 ## Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
